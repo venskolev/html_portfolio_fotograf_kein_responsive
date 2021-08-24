@@ -1,0 +1,18 @@
+@media all and (max-widht:640px) {
+  h1 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 25px;
+  }
+  .title {
+    font-size: 35px;
+  }
+  .listing-item {
+    display: block;
+    width: -webkit-calc(100%/3);
+    width: -moz-calc(100%/3);
+     width: calc(100%/3);
+   }
+}
+

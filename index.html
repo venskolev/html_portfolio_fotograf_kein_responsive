@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Intro</title>
+	<meta name="description" content="Do you know, How to make landing page animation? This demo is about creating full page intro animation with Javacript. Have a look the demo and see how it works. " />
+    <meta name="author" content="Codeconvey" />
+    <meta http-equiv='refresh' content='30; URL=portfolio.html'>
+     <link rel="stylesheet" type="text/css" href="/inc/css/intro_style.css" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/inc/js/bootbox.all.js"></script>
+    <script>/*
+           function setCookie(cname,cvalue,exdays) {
+          const d = new Date();
+          d.setTime(d.getTime() + (exdays*24*60*60*1000));
+          let expires = "expires=" + d.toGMTString();
+          document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+        
+        function getCookie(cname) {
+          let name = cname + "=";
+          let decodedCookie = decodeURIComponent(document.cookie);
+          let ca = decodedCookie.split(';');
+          for(let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        
+        function checkCookie() {
+          let user = getCookie("username");
+          if (user != "") {
+            alert("Willkommen zurück " + user);
+            window.location.href = "portfolio.html"
+          } else {
+             user = prompt("Bitte gib Dein Namen ein:","");
+             if (user != "" && user != null) {
+               setCookie("username", user, 30);
+               return "";
+             }
+          }
+        }
+      
+        /*global $, document, setTimeout, i*/
+    $(document).ready(function () {
+    
+    'use strict';
+    
+    var slide  = $('.slide'),
+        slideAelements = $('.slide-a-child'),
+        slideBelements = $('.slide-b-child'),
+        slideCelements = $('.slide-c-child'),
+        slideDelements = $('.slide-d-child'),
+        replay = $('.replay');
+    
+    
+    
+    slide.each(function (i) {
+        if (i < 3) {
+            setTimeout(function () {
+                slide.eq(i).fadeOut();
+            }, 5000 * (i + 1));
+        }
+    });
+    
+    
+    function animateSlideA() {
+      slideAelements.each(function (i) {
+          setTimeout(function () {
+              slideAelements.eq(i).addClass('is-visible');
+          }, 400 * (i + 1));
+      });
+    }
+    
+    function animateSlideB() {
+      slideBelements.each(function (i) {
+          setTimeout(function () {
+              slideBelements.eq(i).addClass('is-visible');
+          }, 400 * (i + 1));
+      });
+    }
+    
+     function animateSlideC() {
+      slideCelements.each(function (i) {
+          setTimeout(function () {
+              slideCelements.eq(i).addClass('is-visible');
+          }, 250 * (i + 1));
+      });
+    }
+    
+    function animateSlideD() {
+      slideDelements.each(function (i) {
+          setTimeout(function () {
+              slideDelements.eq(i).addClass('is-visible');
+          }, 400 * (i + 1));
+      });
+    }
+    
+    animateSlideA();
+    
+    setTimeout(function () {
+       animateSlideB();
+    }, 5000);
+    
+    setTimeout(function () {
+       animateSlideC();
+    }, 10000);
+    
+    setTimeout(function () {
+       animateSlideD();
+    }, 15000);
+    
+    
+    replay.on('click', function () {
+     location.reload(true);
+    });
+    
+    });
+    
+    </script>
+</head>
+<body>
+
+<div class="intro">
+   <div class="animated-bar"></div>
+
+   <div class="slide slide-a">
+      <div class="slide-content">
+         <h2 class="slide-a-child">Hallo</h2>
+         <h3 class="slide-a-child">Mein Name ist Vens Kolev</h3>
+         <p class="slide-a-child">Ich bin Dein Fotograf</p>
+      </div>
+   </div>
+
+   <div class="slide slide-b">
+      <div class="slide-content">
+         <h2 class="slide-b-child">Studioshooting</h2>
+         <p class="slide-b-child">Macht euer nächstes Fotoshooting zu einem unvergesslichen Erlebnis.</p>
+         <p class="slide-b-child">Professionell erstellte Portraitaufnahmen!</p>
+      </div>
+   </div>
+
+   <div class="slide slide-c">
+      <div class="slide-content">
+         <h2 class="slide-c-child">Outdoorshooting</h2>
+         <ul>
+            <li class="slide-c-child"><p>Familie oder Alein</p></li>
+            <li class="slide-c-child"><p>All Seasons</p></li>
+            <li class="slide-c-child"><p>in der Park oder Stadt</p></li>
+            <li class="slide-c-child"><p>Umgebung Köln ca.20 km</p></li>
+         </ul>
+      </div>
+   </div>
+
+   <div class="slide slide-d">
+      <div class="slide-content">
+         <h2 class="slide-d-child">Danke</h2>
+         <p class="slide-d-child">und witer mit meiner Webseite</p>
+         <button onclick="window.location.href = 'portfolio.html'">Hier klicken</button>
+      </div>
+   </div>
+
+</div>
+
+<header class="ScriptHeader">
+    <div class="rt-container">
+    	<div class="col-rt-12">
+        	<div class="rt-heading">
+            </div>
+        </div>
+    </div>
+</header>
+<!--
+<body onload="checkCookie()"></body>
+  -->
+	</body>
+</html>
